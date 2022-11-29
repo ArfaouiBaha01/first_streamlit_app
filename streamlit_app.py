@@ -21,7 +21,7 @@ fruits_to_show=my_fruit_list.loc[fruits_to_show]
 streamlit.dataframe(fruits_to_show)
 streamlit.header("Fruityvice Fruit Advice!")
 # create the repeatable code block 
-def get_fruiyvice_data(fruit_choice):
+def get_fruityvice_data(fruit_choice):
   # write your own comment -what does the next line do? 
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
